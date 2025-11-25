@@ -40,14 +40,17 @@ const StatsGrid = () => {
               </div>
 
               <div
-                className={`p-3 rounded-xl group-hover:scale-110 transition-all duration-200`}
-              ></div>
+                className={`p-3 rounded-xl ${item.bgColor} group-hover:scale-110 transition-all duration-200`}
+              >
+                {<item.icon className={`w-6 h-6 ${item.textColor}`} />}
+              </div>
             </div>
 
             {/* ----progressbar--- */}
             <div className="mt-4 h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
               <div
-                className={`w-full bg-gradient-to-r rounded-full transition-all duration-100`}
+                className={`h-full bg-gradient-to-r ${item.color} rounded-full transition-all duration-100`}
+                style={{ width: item.trend === "up" ? "75%" : "40%" }}
               ></div>
             </div>
           </div>
