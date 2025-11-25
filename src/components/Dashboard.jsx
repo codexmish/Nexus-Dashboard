@@ -8,7 +8,11 @@ const Dashboard = () => {
     <div className="space-y-6">
         {/* ----stats grid--- */}
         <StatsGrid/>
+
+        {/* ----charts section */}
         <ChartSection/>
+
+        {/* 1:20 */}
     </div>
     
     </>
