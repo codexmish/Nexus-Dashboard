@@ -1,5 +1,6 @@
 import React from 'react'
 import StatsGrid from './StatsGrid'
+import ChartSection from './ChartSection'
 
 const Dashboard = () => {
   return (
@@ -7,6 +8,7 @@ const Dashboard = () => {
     <div className="space-y-6">
         {/* ----stats grid--- */}
         <StatsGrid/>
+        <ChartSection/>
     </div>
     
     </>
