@@ -18,7 +18,10 @@ const App = () => {
             onPageChange={setCurrenPage}
           />
           <div className="flex-1 flex flex-col overflow-hidden">
-            <Header />
+            <Header
+              sidebarCollaps={sidebarCollaps}
+              onToggleSidebar={() => setSidebarCollaps(!sidebarCollaps)}
+            />
           </div>
         </div>
       </div>
