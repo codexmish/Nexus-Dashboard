@@ -1,4 +1,15 @@
 import React from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { chartsData } from "../constants";
 
 const Revnuechart = () => {
   return (
@@ -15,18 +26,14 @@ const Revnuechart = () => {
           </div>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
-                
-              </div>
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
               <div className="text-sm text-slate-600 dark:text-slate-400">
                 <span>Revnue</span>
               </div>
             </div>
 
             <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-gradient-to-r from-slate-400 to-slate-500 rounded-full">
-                
-              </div>
+              <div className="w-3 h-3 bg-gradient-to-r from-slate-400 to-slate-500 rounded-full"></div>
               <div className="text-sm text-slate-600 dark:text-slate-400">
                 <span>Expenses</span>
               </div>
@@ -34,7 +41,90 @@ const Revnuechart = () => {
           </div>
         </div>
 
-        <div className="h-80"></div>
+        <div className="h-80">
+          <ResponsiveContainer width={"100%"} height={"100%"}>
+            <BarChart
+              data={chartsData}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#e2e8f0"
+                opacity={0.3}
+              />
+              <XAxis
+                dataKey="month"
+                stroke="#64748b"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
+              <YAxis
+                stroke="#64748b"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `$${value / 1000}k`}
+              />
+              {/* <YAxis
+                yAxisId="right"
+                orientation="right"
+                stroke="#82ca9d"
+                width="auto"
+              /> */}
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "rgba(255,255,255,0.95)",
+                  border: "none",
+                  borderRadius: "12px",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+                }}
+                formatter={(value) => [`$${value.toLocaleString()}`, ""]}
+              />
+              {/* <Legend /> */}
+              <Bar
+                dataKey={"revenue"}
+                fill="url(#revenueGradient)"
+                radius={[4, 4, 0, 0]}
+                maxBarSize={40}
+              />
+              <Bar
+                dataKey={"expenses"}
+                fill="url(#expensesGradient)"
+                radius={[4, 4, 0, 0]}
+                maxBarSize={40}
+              />
+
+              <defs>
+                <linearGradient
+                  id="revenueGradient"
+                  x1={"0"}
+                  y1={"0"}
+                  x2={"0"}
+                  y2={"1"}
+                >
+                  <stop offset={"0%"} stopColor="#3b82f6" />
+                  <stop offset={"100%"} stopColor="#8b5cf6" />
+                </linearGradient>
+                <linearGradient
+                  id="expensesGradient"
+                  x1={"0"}
+                  y1={"0"}
+                  x2={"0"}
+                  y2={"1"}
+                >
+                  <stop offset={"0%"} stopColor="#94a3b8" />
+                  <stop offset={"100%"} stopColor="#64748b" />
+                </linearGradient>
+              </defs>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </>
   );
