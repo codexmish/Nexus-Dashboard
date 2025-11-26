@@ -64,7 +64,7 @@ const Header = ({sidebarCollaps, onToggleSidebar}) => {
             {/* ---Notification */}
             <button className="relative p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 right-0.5 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                 3
               </span>
             </button>
@@ -79,7 +79,7 @@ const Header = ({sidebarCollaps, onToggleSidebar}) => {
               <img
                 src={user}
                 alt="user"
-                className="w-8 h-8 rounded-full ring-2 ring-blue-500"
+                className="w-16 h-16 rounded-full ring-2 ring-blue-500"
               />
               <div className="hidden md:block">
                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
