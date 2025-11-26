@@ -79,7 +79,7 @@ const Header = ({sidebarCollaps, onToggleSidebar}) => {
               <img
                 src={user}
                 alt="user"
-                className="w-16 h-16 rounded-full ring-2 ring-blue-500"
+                className="w-8 h-8 rounded-full ring-2 ring-blue-500"
               />
               <div className="hidden md:block">
                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">

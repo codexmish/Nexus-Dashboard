@@ -1,22 +1,19 @@
-import React from 'react'
-import StatsGrid from './StatsGrid'
-import ChartSection from './ChartSection'
+import React from "react";
+import StatsGrid from "./StatsGrid";
+import ChartSection from "./ChartSection";
 
 const Dashboard = () => {
   return (
     <>
-    <div className="space-y-6">
+      <div className="space-y-6">
         {/* ----stats grid--- */}
-        <StatsGrid/>
+        <StatsGrid />
 
         {/* ----charts section */}
-        <ChartSection/>
-
-        {/* 1:20 */}
-    </div>
-    
+        <ChartSection />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

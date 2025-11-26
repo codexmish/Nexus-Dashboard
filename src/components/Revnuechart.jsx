@@ -70,12 +70,6 @@ const Revnuechart = () => {
                 axisLine={false}
                 tickFormatter={(value) => `$${value / 1000}k`}
               />
-              {/* <YAxis
-                yAxisId="right"
-                orientation="right"
-                stroke="#82ca9d"
-                width="auto"
-              /> */}
               <Tooltip
                 contentStyle={{
                   backgroundColor: "rgba(255,255,255,0.95)",
