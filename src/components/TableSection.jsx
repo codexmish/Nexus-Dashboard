@@ -1,4 +1,4 @@
-import { MoreHorizontal } from "lucide-react";
+import { MoreHorizontal, TrendingUp } from "lucide-react";
 import React from "react";
 import { recentOrders } from "../constants";
 
@@ -11,7 +11,7 @@ const TableSection = () => {
     } else if (status == "cancelled") {
       return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400";
     } else {
-      ("bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-400");
+      return "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-400";
     }
   };
 
@@ -105,6 +105,49 @@ const TableSection = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        {/* -----Top Products-- */}
+        <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-200/50 dark:border-slate-700/50 overflow-hidden">
+          <div className="p-6 border-b border-slate-200/50 dark:border-b-slate-700/50">
+            <div className="flex items-center justify-between">
+              <div className="text-lg font-bold text-slate-800 dark:text-white">
+                <h3 className="text-lg font-bold text-slate-800 dark:text-white">
+                  Top Products
+                </h3>
+              </div>
+              <p className="text-sm text-slate-800 dark:text-slate-400">
+                Best Performing Products
+              </p>
+            </div>
+            <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+              View All
+            </button>
+          </div>
+
+          {/* dynamic data */}
+          <div className="p-6 space-y-4">
+            <div className="flex items-center justify-between p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-white">
+                  Product Name
+                </h4>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  Product Sales
+                </p>
+              </div>
+
+              <div className="text-right">
+                <p className="text-sm font-semibold text-slate-800 dark:text-white">
+                  Product Revenue
+                </p>
+                <div className="flex items-center space-x-1">
+                  <TrendingUp className="w-3 h-3 text-emerald-500"/>
+                  <span>Product Change</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

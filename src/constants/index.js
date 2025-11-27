@@ -258,4 +258,35 @@ const recentOrders = [
   },
 ];
 
-export { menuItem, stats, chartsData, salesChartData, recentOrders };
+const topProducts = [
+  {
+    name: "MacBook Pro 16",
+    sales: 1247,
+    revenue: "$2,987,530",
+    trend: "up",
+    change: "+12%",
+  },
+  {
+    name: "iPhone 15 Pro",
+    sales: 2156,
+    revenue: "$2,587,044",
+    trend: "up",
+    change: "+8%",
+  },
+  {
+    name: "AirPods Pro",
+    sales: 3421,
+    revenue: "$852,229",
+    trend: "down",
+    change: "-3%",
+  },
+  {
+    name: "iPad Air",
+    sales: 987,
+    revenue: "$591,044",
+    trend: "up",
+    change: "+15%",
+  },
+];
+
+export { menuItem, stats, chartsData, salesChartData, recentOrders, topProducts };
