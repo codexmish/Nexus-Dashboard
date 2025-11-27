@@ -223,4 +223,39 @@ const salesChartData = [
   },
 ];
 
-export { menuItem, stats, chartsData, salesChartData };
+const recentOrders = [
+  {
+    id: "#3847",
+    customer: "John Smith",
+    Product: "MacBook Pro 16",
+    amount: "$2,399",
+    stats: "completed",
+    date: "2024-01-15",
+  },
+  {
+    id: "#3847",
+    customer: "Sarah Jphnson",
+    Product: "iPhone 15 Pro",
+    amount: "$1,199",
+    stats: "pending",
+    date: "2024-01-15",
+  },
+  {
+    id: "#3847",
+    customer: "Mike wilson",
+    Product: "AirPods Pro",
+    amount: "$249",
+    stats: "completed",
+    date: "2024-01-15",
+  },
+  {
+    id: "#3850",
+    customer: "Emily",
+    Product: "iPad Air",
+    amount: "$599",
+    stats: "cancelled",
+    date: "2024-01-15",
+  },
+];
+
+export { menuItem, stats, chartsData, salesChartData, recentOrders };
