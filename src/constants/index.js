@@ -1,5 +1,6 @@
 import {
   BarChart3,
+  Bell,
   Calendar,
   CreditCard,
   DollarSign,
@@ -289,4 +290,65 @@ const topProducts = [
   },
 ];
 
-export { menuItem, stats, chartsData, salesChartData, recentOrders, topProducts };
+const activities = [
+  {
+    id: 1,
+    type: "user",
+    icon: User,
+    title: "New user Registered",
+    description: "Dipjol created an account",
+    time: "2 minutes ago",
+    color: "text-blue-500",
+    bgColor: "bg-blue-100 dark:bg-blue-900/30",
+  },
+  {
+    id: 2,
+    type: "order",
+    icon: ShoppingCart,
+    title: "New order received",
+    description: "Order #3847 for $2,399",
+    time: "5 minutes ago",
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
+  },
+  {
+    id: 3,
+    type: "payment",
+    icon: CreditCard,
+    title: "Payment processed",
+    description: "payment of $1,199 completed",
+    time: "12 minutes ago",
+    color: "text-purple-500",
+    bgColor: "bg-purple-100 dark:bg-purple-900/30",
+  },
+  {
+    id: 4,
+    type: "system",
+    icon: Settings,
+    title: "System update",
+    description: "Database backup completed",
+    time: "1 hours ago",
+    color: "text-orange-500",
+    bgColor: "bg-orange-100 dark:bg-orange-900/30",
+  },
+  {
+    id: 5,
+    type: "notification",
+    icon: Bell,
+    title: "Low stock alert",
+    description: "iPhone 15 Pro stock is low",
+    time: "2 hours ago",
+    color: "text-red-500",
+    bgColor: "bg-red-100 dark:bg-red-900/30",
+  },
+];
+
+export {
+  menuItem,
+  stats,
+  chartsData,
+  salesChartData,
+  recentOrders,
+  topProducts,
+  activities,
+};
