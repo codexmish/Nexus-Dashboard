@@ -129,7 +129,7 @@ const TableSection = () => {
           {/* dynamic data */}
           <div className="p-6 space-y-4">
             {topProducts.map((product, index) => (
-              <div className="flex items-center justify-between p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <div key={index} className="flex items-center justify-between p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
                 <div className="flex-1">
                   <h4 className="text-sm font-semibold text-slate-800 dark:text-white">
                     {product.name}

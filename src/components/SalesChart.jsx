@@ -16,7 +16,7 @@ const SalesChart = () => {
         </div>
 
         <div className="h-48">
-          <ResponsiveContainer width={"100%"} height={"100%"}>
+          <ResponsiveContainer width={"100%"} height={192}>
             <PieChart>
               <Pie
                 data={salesChartData}

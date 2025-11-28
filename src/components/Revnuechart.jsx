@@ -41,7 +41,7 @@ const Revnuechart = () => {
         </div>
 
         <div className="h-80">
-          <ResponsiveContainer width={"100%"} height={"100%"}>
+          <ResponsiveContainer width={"100%"} height={320}>
             <BarChart
               data={chartsData}
               margin={{

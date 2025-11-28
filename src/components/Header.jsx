@@ -19,7 +19,6 @@ const Header = ({ sidebarCollaps, onToggleSidebar }) => {
     document.documentElement.classList.toggle("dark");
     setDarkMode(!darkMode);
   };
-  console.log(darkMode);
 
   return (
     <>
