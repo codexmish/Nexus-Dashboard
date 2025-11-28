@@ -26,7 +26,7 @@ const ActivityFeed = () => {
               <div key={activity.id} className="flex items-start space-x-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
                 <div className={`p-2 rounded-lg ${activity.bgColor}`}>
                   <activity.icon
-                    className={`w-4 h-4 text-slate-400 ${activity.color}`}
+                    className={`w-4 h-4 ${activity.color}`}
                   />
                 </div>
                 <div className="flex-1 min-w-0">
